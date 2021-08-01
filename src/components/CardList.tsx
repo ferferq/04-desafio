@@ -1,5 +1,5 @@
 import { SimpleGrid, useDisclosure } from '@chakra-ui/react';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { Card } from './Card';
 import { ModalViewImage } from './Modal/ViewImage';
 
@@ -24,8 +24,17 @@ export function CardList({ cards }: CardsProps): JSX.Element {
 
   return (
     <>
-      {/* TODO CARD GRID */}
-
+      <div>
+          {/* TODO CARD GRID */
+            cards?.map(card => {
+              return (
+              <Fragment key={card.id}>
+              <h1>{card.title}</h1>
+              </Fragment>
+              )
+            })
+          }
+      </div>
       {/* TODO MODALVIEWIMAGE */}
     </>
   );

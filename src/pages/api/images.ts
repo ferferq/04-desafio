@@ -27,6 +27,9 @@ export default async function handler(
 ): Promise<void> {
   if (req.method === 'POST') {
     const { url, title, description } = req.body;
+    console.log(req)
+
+    console.log(url, title, description)
 
     return client
       .query(
@@ -50,7 +53,7 @@ export default async function handler(
 
   if (req.method === 'GET') {
     const { after } = req.query;
-
+    
     const queryOptions = {
       size: 6,
       ...(after && { after: query.Ref(query.Collection('images'), after) }),
