@@ -108,7 +108,6 @@ export function FormAddImage({ closeModal }: FormAddImageProps): JSX.Element {
         duration: 9000,
         isClosable: true,
       })
-
     } catch (err) {
       // TODO SHOW ERROR TOAST IF SUBMIT FAILED
       if (err === 'url_invalid') {

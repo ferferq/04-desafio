@@ -18,6 +18,7 @@ export function ModalAddImage({
   isOpen,
   onClose,
 }: ModalAddImageProps): JSX.Element {
+
   const handleCloseModal = (): void => {
     onClose();
   };
